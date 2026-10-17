@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Barbearia Ã‰ Nossa | TradiÃ§Ã£o em Penha - RJ</title>
+  <meta name="description" content="Mais que um corte, Ã© um encontro. Desde sempre cuidando do seu visual com qualidade, conversa boa e respeito. Mais de 30 anos na Penha - RJ." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'barber-serif': ['"Playfair Display"', 'Georgia', 'serif'],
+            'barber-sans': ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-[#0B0E13] text-white font-barber-sans antialiased selection:bg-[#C81E24] selection:text-white overflow-x-hidden">
+
+  <div class="flex flex-col">
+
+    <!-- =========================================================
+         SECTION 1: HERO & NAVBAR (Order 1 on Desktop and Mobile)
+    ========================================================= -->
+    <section id="inicio" class="order-1 relative w-full bg-[#0A0C10] overflow-hidden border-b border-white/[0.06]">
+      
+      <!-- DESKTOP HERO BACKGROUND -->
+      <div class="hidden lg:block absolute inset-0 pointer-events-none select-none">
+        <img
+          src="assets/hero-desktop.jpg"
+          alt="Barbeiro A Barbearia Ã‰ Nossa"
+          fetchpriority="high"
+          class="w-full h-full object-cover object-[72%_center]"
+        />
+        <div
+          class="absolute inset-0"
+          style="background: linear-gradient(90deg, #0A0D12 0%, #0A0D12 36%, rgba(10,13,18,0.82) 48%, rgba(10,13,18,0.18) 65%, rgba(10,13,18,0.08) 100%);"
+        ></div>
+        <div
+          class="absolute inset-0"
+          style="background: linear-gradient(180deg, rgba(10,13,18,0.68) 0%, rgba(10,13,18,0) 22%, rgba(10,13,18,0) 82%, #0B0E13 100%);"
+        ></div>
+      </div>
+
+      <!-- TOP NAVBAR (Desktop & Mobile) -->
+      <header class="relative z-30 max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-12 pt-5 lg:pt-7 pb-3 flex items-center justify-between">
+        <a href="#inicio" class="inline-flex items-center focus:outline-none group" aria-label="A Barbearia Ã‰ Nossa - InÃ­cio">
+          <img
+            src="assets/logo.png"
+            alt="Logo A Barbearia Ã‰ Nossa"
+            class="h-12 sm:h-14 lg:h-[62px] w-auto object-contain"
+            style="mix-blend-mode: lighten;"
+          />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-10 text-[15px] font-medium text-white/85">
+          <a href="#inicio" class="relative text-white font-semibold py-1.5 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-8 after:h-[2.5px] after:bg-[#C81E24] after:rounded-full">InÃ­cio</a>
+          <a href="#servicos" class="hover:text-white transition-colors py-1.5">ServiÃ§os</a>
+          <a href="#sobre" class="hover:text-white transition-colors py-1.5">Sobre</a>
+          <a href="#como-chegar" class="hover:text-white transition-colors py-1.5">Como chegar</a>
+        </nav>
+
+        <!-- Desktop Header CTA -->
+        <div class="hidden lg:block">
+          <a
+            href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 bg-[#B81D22] hover:bg-[#CC2026] active:scale-[0.99] text-white font-semibold text-[15px] px-6 py-3 rounded-xl shadow-[0_8px_24px_rgba(184,29,34,0.35)] transition-all"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+            <span>Agendar agora</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 text-white/90 hover:text-white focus:outline-none"
+          aria-label="Abrir menu"
+        >
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden relative z-40 mx-5 mb-4 p-5 rounded-2xl bg-[#12161F]/95 backdrop-blur-md border border-white/10 shadow-2xl space-y-3">
+        <nav class="flex flex-col space-y-2.5 text-base font-medium text-white/90">
+          <a href="#inicio" class="mobile-link py-1.5 text-white font-semibold flex items-center justify-between">
+            <span>InÃ­cio</span>
+            <span class="w-2 h-2 rounded-full bg-[#C81E24]"></span>
+          </a>
+          <a href="#servicos" class="mobile-link py-1.5 hover:text-white">ServiÃ§os</a>
+          <a href="#sobre" class="mobile-link py-1.5 hover:text-white">Sobre</a>
+          <a href="#resultados" class="mobile-link py-1.5 hover:text-white">Resultados Reais</a>
+          <a href="#como-chegar" class="mobile-link py-1.5 hover:text-white">Como chegar</a>
+        </nav>
+        <a
+          href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-2.5 bg-[#B81D22] text-white font-semibold text-sm py-3.5 rounded-xl"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+          <span>Agendar agora</span>
+        </a>
+      </div>
+
+      <!-- MOBILE HERO IMAGE & CONTENT (Exact match to Mobile Screen 1) -->
+      <div class="lg:hidden relative">
+        <div class="relative w-full h-[380px] sm:h-[440px] -mt-14 overflow-hidden">
+          <img
+            src="assets/hero-mobile.jpg"
+            alt="Barbeiro A Barbearia Ã‰ Nossa"
+            fetchpriority="high"
+            class="w-full h-full object-cover object-[center_18%]"
+          />
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(180deg, rgba(10,12,16,0.85) 0%, rgba(10,12,16,0.15) 28%, rgba(10,12,16,0.1) 62%, #0A0C10 98%);"
+          ></div>
+        </div>
+
+        <div class="relative z-10 px-6 pb-8 -mt-16">
+          <p class="text-[11px] uppercase tracking-[0.28em] font-semibold mb-2.5 text-white/90">
+            <span class="text-[#C81E24]">TRADIÃ‡ÃƒO</span> EM PENHA - RJ
+          </p>
+
+          <h1 class="font-barber-serif text-[36px] sm:text-[42px] leading-[1.06] font-normal uppercase tracking-tight text-white mb-3.5">
+            MAIS QUE<br />
+            UM CORTE,<br />
+            <span class="text-[#C81E24] font-semibold">Ã‰ UM ENCONTRO.</span>
+          </h1>
+
+          <p class="text-[14px] leading-[1.55] text-white/80 mb-6 max-w-[330px]">
+            Desde sempre cuidando do seu visual com qualidade, conversa boa e respeito.
+          </p>
+
+          <a
+            href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-3 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15px] py-4 px-6 rounded-xl shadow-[0_8px_25px_rgba(184,29,34,0.4)] transition-all mb-6"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+            <span>Agendar meu horÃ¡rio</span>
+            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+
+          <!-- Mobile Hours & Address Row -->
+          <div class="grid grid-cols-2 items-center pt-1 pb-5 border-t border-white/10">
+            <div class="flex items-center gap-2.5 pr-3 border-r border-white/15">
+              <svg class="w-5 h-5 text-white/75 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+              <div class="text-[11.5px] leading-[1.35]">
+                <p class="font-semibold text-white">9h30 Ã s 19h00</p>
+                <p class="text-white/65">Segunda a SÃ¡bado</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 pl-3">
+              <svg class="w-5 h-5 text-white/75 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="text-[11.5px] leading-[1.35]">
+                <p class="font-semibold text-white">Rua Costa Rica, 21</p>
+                <p class="text-white/65">Loja - Penha - RJ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Downward Chevron -->
+          <div class="flex justify-center pt-1">
+            <a href="#servicos" aria-label="Rolar para serviÃ§os" class="text-white/60 hover:text-white transition-colors">
+              <svg class="w-6 h-6 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESKTOP HERO CONTENT (Exact match to Desktop Image 1) -->
+      <div class="hidden lg:block relative z-20 max-w-[1240px] mx-auto px-12 pt-14 pb-20">
+        <div class="max-w-[560px]">
+          <p class="text-[12px] uppercase tracking-[0.34em] text-white/85 font-medium mb-4">
+            TRADIÃ‡ÃƒO EM PENHA â€“ RJ
+          </p>
+
+          <h1 class="font-barber-serif text-[58px] xl:text-[64px] leading-[1.03] font-normal uppercase tracking-[-0.01em] text-white mb-6">
+            MAIS QUE<br />
+            UM CORTE,<br />
+            <span class="text-[#C81E24] font-semibold">Ã‰ UM ENCONTRO.</span>
+          </h1>
+
+          <p class="text-[17px] leading-[1.6] text-white/85 font-normal mb-8 max-w-[440px]">
+            Desde sempre cuidando do seu visual<br />
+            com qualidade, conversa boa e respeito.
+          </p>
+
+          <div class="mb-12">
+            <a
+              href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3.5 bg-[#B81D22] hover:bg-[#CC2026] active:scale-[0.99] text-white font-semibold text-[16px] px-8 py-4 rounded-xl shadow-[0_10px_28px_rgba(184,29,34,0.38)] transition-all"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+              <span>Agendar meu horÃ¡rio</span>
+              <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <!-- Desktop Info Bar -->
+          <div class="inline-flex items-center gap-8 pt-2">
+            <div class="flex items-center gap-3.5">
+              <svg class="w-6 h-6 text-white/80 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+              <div class="text-[13.5px] leading-[1.4]">
+                <p class="font-semibold text-white">9h30 Ã s 19h00</p>
+                <p class="text-white/70">Segunda a SÃ¡bado</p>
+              </div>
+            </div>
+
+            <div class="h-9 w-px bg-white/20"></div>
+
+            <div class="flex items-center gap-3.5">
+              <svg class="w-6 h-6 text-white/80 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="text-[13.5px] leading-[1.4]">
+                <p class="font-semibold text-white">Rua Costa Rica, 21 â€“ Loja</p>
+                <p class="text-white/70">Penha â€“ RJ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: NOSSOS SERVIÃ‡OS (Order 2 on Desktop and Mobile)
+    ========================================================= -->
+    <section id="servicos" class="order-2 relative bg-[#0D1015] py-12 lg:py-20 border-b border-white/[0.06]">
+      <div class="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12">
+        
+        <!-- DESKTOP LAYOUT -->
+        <div class="hidden lg:grid lg:grid-cols-12 lg:gap-10 items-center">
+          <div class="col-span-4 pr-4">
+            <p class="text-[12px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-3">
+              NOSSOS SERVIÃ‡OS
+            </p>
+            <h2 class="font-barber-serif text-[44px] xl:text-[48px] leading-[1.08] text-white font-normal mb-4">
+              Corte, barba<br />e muito mais.
+            </h2>
+            <div class="w-8 h-[2.5px] bg-[#C81E24] mb-5"></div>
+            <p class="text-[15.5px] leading-[1.6] text-white/75 mb-8 max-w-[310px]">
+              ServiÃ§os completos para manter<br />seu estilo, do jeito que vocÃª gosta.
+            </p>
+            <a
+              href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20todos%20os%20servi%C3%A7os%20da%20A%20Barbearia%20%C3%89%20Nossa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 border border-white/25 hover:border-white/50 hover:bg-white/[0.04] text-white text-[14.5px] font-medium px-7 py-3.5 rounded-xl transition-all"
+            >
+              <span>Ver todos os serviÃ§os</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="col-span-8 grid grid-cols-3 gap-5">
+            <!-- Card 1 -->
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20e%20Barba." target="_blank" rel="noopener noreferrer" class="group relative rounded-2xl overflow-hidden bg-[#11151C] border border-white/15 hover:border-white/30 transition-all flex flex-col">
+              <div class="relative h-[250px] w-full overflow-hidden">
+                <img src="assets/service-barba.jpg" alt="Corte e Barba" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(14,17,23,0) 45%, #0E1117 100%);"></div>
+              </div>
+              <div class="bg-[#0E1117] px-5 pt-2 pb-5">
+                <h3 class="font-barber-serif text-[21px] text-white font-medium mb-2.5">Corte e Barba</h3>
+                <div class="w-7 h-[2.5px] bg-[#C81E24]"></div>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20Masculino." target="_blank" rel="noopener noreferrer" class="group relative rounded-2xl overflow-hidden bg-[#11151C] border border-white/15 hover:border-white/30 transition-all flex flex-col">
+              <div class="relative h-[250px] w-full overflow-hidden">
+                <img src="assets/service-corte.jpg" alt="Corte Masculino" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(14,17,23,0) 45%, #0E1117 100%);"></div>
+              </div>
+              <div class="bg-[#0E1117] px-5 pt-2 pb-5">
+                <h3 class="font-barber-serif text-[21px] text-white font-medium mb-2.5">Corte Masculino</h3>
+                <div class="w-7 h-[2.5px] bg-[#C81E24]"></div>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20%2B%20Barba%20Premium." target="_blank" rel="noopener noreferrer" class="group relative rounded-2xl overflow-hidden bg-[#11151C] border border-white/15 hover:border-white/30 transition-all flex flex-col">
+              <div class="relative h-[250px] w-full overflow-hidden">
+                <img src="assets/service-premium.jpg" alt="Corte + Barba Premium" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(14,17,23,0) 45%, #0E1117 100%);"></div>
+              </div>
+              <div class="bg-[#0E1117] px-5 pt-1 pb-4">
+                <h3 class="font-barber-serif text-[20px] leading-[1.2] text-white font-medium mb-2">Corte + Barba<br />Premium</h3>
+                <div class="w-7 h-[2.5px] bg-[#C81E24]"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- MOBILE LAYOUT -->
+        <div class="lg:hidden">
+          <p class="text-[11px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-2">
+            NOSSOS SERVIÃ‡OS
+          </p>
+          <h2 class="font-barber-serif text-[36px] leading-[1.08] text-white font-normal mb-3">
+            Corte, barba<br />e muito mais.
+          </h2>
+          <p class="text-[14px] leading-[1.55] text-white/75 mb-6 max-w-[310px]">
+            ServiÃ§os completos para manter seu estilo, do jeito que vocÃª gosta.
+          </p>
+
+          <div class="space-y-3.5 mb-6">
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20Masculino." target="_blank" rel="noopener noreferrer" class="relative flex items-center bg-[#12161E] border border-white/[0.08] rounded-2xl overflow-hidden p-2.5 pr-4 hover:border-white/20 transition-all">
+              <div class="w-[112px] h-[104px] rounded-xl overflow-hidden shrink-0">
+                <img src="assets/service-corte.jpg" alt="Corte Masculino" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+              <div class="pl-4 flex-1 py-1">
+                <h3 class="font-barber-serif text-[20px] leading-[1.2] text-white font-medium mb-2.5">Corte<br />Masculino</h3>
+                <div class="w-7 h-[2px] bg-[#C81E24]"></div>
+              </div>
+              <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/75 self-end mb-1">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </div>
+            </a>
+
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Barba%20Completa." target="_blank" rel="noopener noreferrer" class="relative flex items-center bg-[#12161E] border border-white/[0.08] rounded-2xl overflow-hidden p-2.5 pr-4 hover:border-white/20 transition-all">
+              <div class="w-[112px] h-[104px] rounded-xl overflow-hidden shrink-0">
+                <img src="assets/service-barba.jpg" alt="Barba Completa" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+              <div class="pl-4 flex-1 py-1">
+                <h3 class="font-barber-serif text-[20px] leading-[1.2] text-white font-medium mb-2.5">Barba<br />Completa</h3>
+                <div class="w-7 h-[2px] bg-[#C81E24]"></div>
+              </div>
+              <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/75 self-end mb-1">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </div>
+            </a>
+
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20%2B%20Barba%20Premium." target="_blank" rel="noopener noreferrer" class="relative flex items-center bg-[#12161E] border border-white/[0.08] rounded-2xl overflow-hidden p-2.5 pr-4 hover:border-white/20 transition-all">
+              <div class="w-[112px] h-[104px] rounded-xl overflow-hidden shrink-0">
+                <img src="assets/service-premium.jpg" alt="Corte + Barba Premium" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+              <div class="pl-4 flex-1 py-1">
+                <h3 class="font-barber-serif text-[20px] leading-[1.2] text-white font-medium mb-2.5">Corte + Barba<br />Premium</h3>
+                <div class="w-7 h-[2px] bg-[#C81E24]"></div>
+              </div>
+              <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/75 self-end mb-1">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </div>
+            </a>
+
+            <a href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Corte%20Infantil." target="_blank" rel="noopener noreferrer" class="relative flex items-center bg-[#12161E] border border-white/[0.08] rounded-2xl overflow-hidden p-2.5 pr-4 hover:border-white/20 transition-all">
+              <div class="w-[112px] h-[104px] rounded-xl overflow-hidden shrink-0">
+                <img src="assets/service-infantil.jpg" alt="Corte Infantil" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+              <div class="pl-4 flex-1 py-1">
+                <h3 class="font-barber-serif text-[20px] leading-[1.2] text-white font-medium mb-2.5">Corte Infantil</h3>
+                <div class="w-7 h-[2px] bg-[#C81E24]"></div>
+              </div>
+              <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/75 self-end mb-1">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </div>
+            </a>
+          </div>
+
+          <a
+            href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20todos%20os%20servi%C3%A7os%20da%20A%20Barbearia%20%C3%89%20Nossa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-2.5 border border-white/25 text-white font-medium text-[14.5px] py-3.5 px-6 rounded-xl hover:bg-white/5 transition-all"
+          >
+            <span>Ver todos os serviÃ§os</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: DESDE SEMPRE - MAIS DE 30 ANOS NA PENHA (Order 3)
+    ========================================================= -->
+    <section id="sobre" class="order-3 relative bg-[#0A0D12] border-b border-white/[0.06]">
+      
+      <!-- DESKTOP LAYOUT -->
+      <div class="hidden lg:grid lg:grid-cols-12 items-stretch max-w-[1440px] mx-auto">
+        <div class="col-span-6 relative min-h-[420px] overflow-hidden">
+          <img src="assets/interior-chair.jpg" alt="Interior A Barbearia Ã‰ Nossa" loading="lazy" class="w-full h-full object-cover" />
+          <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(10,13,18,0) 70%, #0A0D12 100%);"></div>
+        </div>
+
+        <div class="col-span-6 flex flex-col justify-center px-12 xl:px-16 py-16">
+          <p class="text-[12px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-3">
+            DESDE SEMPRE
+          </p>
+          <h2 class="font-barber-serif text-[44px] xl:text-[48px] leading-[1.08] text-white font-normal mb-4">
+            Mais de 30 anos<br />na Penha.
+          </h2>
+          <div class="w-8 h-[2.5px] bg-[#C81E24] mb-5"></div>
+          <p class="text-[15.5px] leading-[1.65] text-white/80 mb-10 max-w-[500px]">
+            Uma barbearia de bairro, feita por pessoas reais, para homens reais. Aqui vocÃª encontra qualidade, confianÃ§a e aquele atendimento que faz a diferenÃ§a.
+          </p>
+
+          <div class="grid grid-cols-3 gap-6 max-w-[500px]">
+            <div class="flex flex-col items-center text-center">
+              <svg class="w-7 h-7 text-white/85 mb-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <p class="text-[13px] leading-[1.35] text-white/85">Atendimento<br />de confianÃ§a</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+              <svg class="w-7 h-7 text-white/85 mb-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <p class="text-[13px] leading-[1.35] text-white/85">Clientes de<br />todas as idades</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+              <svg class="w-7 h-7 text-white/85 mb-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <p class="text-[13px] leading-[1.35] text-white/85">Qualidade<br />em cada detalhe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE LAYOUT -->
+      <div class="lg:hidden py-12">
+        <div class="px-6 mb-6">
+          <p class="text-[11px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-2">
+            DESDE SEMPRE
+          </p>
+          <h2 class="font-barber-serif text-[36px] leading-[1.08] text-white font-normal mb-3.5">
+            Mais de 30 anos<br />na Penha.
+          </h2>
+          <p class="text-[14px] leading-[1.6] text-white/80">
+            Uma barbearia de bairro, feita por pessoas reais, para homens reais. Aqui vocÃª encontra qualidade, confianÃ§a e aquele atendimento que faz a diferenÃ§a.
+          </p>
+        </div>
+
+        <div class="relative w-full h-[300px] sm:h-[360px] overflow-hidden my-2">
+          <img src="assets/barber-cutting.jpg" alt="Barbeiro cortando cabelo na A Barbearia Ã‰ Nossa" loading="lazy" class="w-full h-full object-cover object-top" />
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, #0A0D12 0%, rgba(10,13,18,0.1) 20%, rgba(10,13,18,0.1) 80%, #0A0D12 100%);"></div>
+        </div>
+
+        <div class="px-6 pt-4 grid grid-cols-3 gap-3 text-center">
+          <div class="flex flex-col items-center">
+            <svg class="w-7 h-7 text-white/85 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+            <p class="text-[11.5px] leading-[1.35] text-white/85">Atendimento<br />de confianÃ§a</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <svg class="w-7 h-7 text-white/85 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <p class="text-[11.5px] leading-[1.35] text-white/85">Clientes de<br />todas as idades</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <svg class="w-7 h-7 text-white/85 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <p class="text-[11.5px] leading-[1.35] text-white/85">Qualidade<br />em cada detalhe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4 (Mobile Order 4, Desktop Order 5): RESULTADOS REAIS
+    ========================================================= -->
+    <section id="resultados" class="order-4 lg:order-5 relative bg-[#0B0E13] py-12 lg:py-20 border-b border-white/[0.06]">
+      <div class="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+          <div class="lg:col-span-5 mb-6 lg:mb-0">
+            <p class="text-[11px] lg:text-[12px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-2 lg:mb-3">
+              RESULTADOS REAIS
+            </p>
+            <h2 class="font-barber-serif text-[36px] lg:text-[46px] leading-[1.08] text-white font-normal mb-3 lg:mb-4">
+              Estilo e<br />autoestima.
+            </h2>
+            <div class="hidden lg:block w-8 h-[2.5px] bg-[#C81E24] mb-5"></div>
+            <p class="text-[14px] lg:text-[16px] leading-[1.55] text-white/80 lg:mb-8 max-w-[320px] lg:max-w-[380px]">
+              Mais que um corte, Ã© confianÃ§a para o seu dia a dia.
+            </p>
+
+            <div class="hidden lg:block">
+              <a
+                href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-3.5 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15.5px] px-8 py-4 rounded-xl shadow-[0_10px_28px_rgba(184,29,34,0.38)] transition-all"
+              >
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+                <span>Agendar meu horÃ¡rio</span>
+                <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-12 gap-3 sm:gap-4 mb-6 lg:mb-0">
+              <div class="col-span-7 rounded-2xl overflow-hidden border border-white/10 h-[340px] sm:h-[420px]">
+                <img src="assets/resultados-main.jpg" alt="Resultado de corte e barba" loading="lazy" class="w-full h-full object-cover" />
+              </div>
+
+              <div class="col-span-5 grid grid-rows-3 gap-3 sm:gap-4 h-[340px] sm:h-[420px]">
+                <div class="rounded-2xl overflow-hidden border border-white/10">
+                  <img src="assets/service-corte.jpg" alt="DegradÃª masculino" loading="lazy" class="w-full h-full object-cover" />
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10">
+                  <img src="assets/resultados-side.jpg" alt="Acabamento corte e barba" loading="lazy" class="w-full h-full object-cover" />
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10">
+                  <img src="assets/service-premium.jpg" alt="Corte e barba grisalha" loading="lazy" class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:hidden">
+              <a
+                href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-3 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15px] py-4 px-6 rounded-xl shadow-[0_8px_25px_rgba(184,29,34,0.4)] transition-all"
+              >
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+                <span>Agendar meu horÃ¡rio</span>
+                <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5 (Mobile Order 5, Desktop Order 6): ONDE ESTAMOS
+    ========================================================= -->
+    <section id="como-chegar" class="order-5 lg:order-6 relative bg-[#0A0D12] py-12 lg:py-20 border-b border-white/[0.06]">
+      <div class="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+          <div class="lg:col-span-5 mb-6 lg:mb-0">
+            <p class="text-[11px] lg:text-[12px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-2 lg:mb-3">
+              ONDE ESTAMOS
+            </p>
+            <h2 class="font-barber-serif text-[36px] lg:text-[46px] leading-[1.08] text-white font-normal mb-3 lg:mb-4">
+              Venha para<br />a nossa barbearia.
+            </h2>
+            <div class="hidden lg:block w-8 h-[2.5px] bg-[#C81E24] mb-5"></div>
+            <p class="text-[14px] lg:text-[16px] leading-[1.55] text-white/80 mb-6 lg:mb-8">
+              Rua Costa Rica, 21 - Loja<br />Penha - RJ
+            </p>
+
+            <div class="hidden lg:block">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Costa+Rica,+21+-+Penha,+Rio+de+Janeiro+-+RJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-3.5 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15.5px] px-8 py-4 rounded-xl shadow-[0_10px_28px_rgba(184,29,34,0.38)] transition-all"
+              >
+                <span>Abrir no Google Maps</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Costa+Rica,+21+-+Penha,+Rio+de+Janeiro+-+RJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block relative rounded-2xl overflow-hidden border border-white/15 bg-[#E8ECEF] h-[190px] sm:h-[260px] lg:h-[320px] mb-6 lg:mb-0 shadow-xl"
+            >
+              <iframe
+                title="Mapa Rua Costa Rica, 21 - Penha, RJ"
+                src="https://www.google.com/maps?q=Rua+Costa+Rica,+21+-+Penha,+Rio+de+Janeiro+-+RJ&output=embed"
+                class="w-full h-full border-0 pointer-events-none"
+                loading="lazy"
+              ></iframe>
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-11 h-11 rounded-full bg-[#C81E24]/20 flex items-center justify-center animate-pulse">
+                  <svg class="w-8 h-8 text-[#C81E24] drop-shadow-md -mt-3" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <div class="lg:hidden">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Costa+Rica,+21+-+Penha,+Rio+de+Janeiro+-+RJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-3 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15px] py-4 px-6 rounded-xl shadow-[0_8px_25px_rgba(184,29,34,0.4)] transition-all"
+              >
+                <span>Abrir no Google Maps</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 6 (Desktop Order 4, Mobile Order 6): VAMOS MARCAR?
+    ========================================================= -->
+    <section id="agendar" class="order-6 lg:order-4 relative bg-[#0D1219] overflow-hidden border-b border-white/[0.06]">
+      <svg class="hidden lg:block absolute right-4 bottom-0 h-[92%] w-auto text-white/[0.03] pointer-events-none select-none" viewBox="0 0 200 260" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="65" y="18" width="70" height="34" rx="10" />
+        <path d="M55 56h90v75a15 15 0 0 1-15 15H70a15 15 0 0 1-15-15V56z" />
+        <path d="M35 105h20v45H35zM145 105h20v45h-20z" />
+        <rect x="48" y="146" width="104" height="28" rx="8" />
+        <path d="M90 174h20v50H90z" />
+        <ellipse cx="100" cy="234" rx="52" ry="12" />
+      </svg>
+
+      <!-- DESKTOP LAYOUT -->
+      <div class="hidden lg:grid lg:grid-cols-12 items-stretch max-w-[1440px] mx-auto">
+        <div class="col-span-6 relative min-h-[380px] overflow-hidden">
+          <img src="assets/leather-headrest.jpg" alt="Encosto de couro A Barbearia Ã‰ Nossa" loading="lazy" class="w-full h-full object-cover" />
+          <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(13,18,25,0) 75%, #0D1219 100%);"></div>
+        </div>
+
+        <div class="col-span-6 relative z-10 flex flex-col justify-center px-12 xl:px-16 py-16">
+          <p class="text-[12px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-3">
+            VAMOS MARCAR?
+          </p>
+          <h2 class="font-barber-serif text-[44px] xl:text-[48px] leading-[1.08] text-white font-normal mb-4">
+            Seu prÃ³ximo corte<br />estÃ¡ aqui.
+          </h2>
+          <div class="w-8 h-[2.5px] bg-[#C81E24] mb-5"></div>
+          <p class="text-[15.5px] leading-[1.6] text-white/80 mb-8 max-w-[380px]">
+            Agende seu horÃ¡rio pelo WhatsApp<br />e garanta seu atendimento.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-6">
+            <a
+              href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3.5 bg-[#B81D22] hover:bg-[#CC2026] active:scale-[0.99] text-white font-semibold text-[16px] px-8 py-4 rounded-xl shadow-[0_10px_28px_rgba(184,29,34,0.38)] transition-all"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+              <span>Agendar agora</span>
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+
+            <a href="https://instagram.com/abarbeariaenossa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white/75 hover:text-white transition-colors">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <div class="text-[12.5px] leading-[1.35]">
+                <p class="text-white/60">Nos siga no Instagram</p>
+                <p class="font-semibold text-white">@abarbeariaenossa</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE LAYOUT -->
+      <div class="lg:hidden pb-12">
+        <div class="relative w-full h-[250px] sm:h-[300px] overflow-hidden">
+          <img src="assets/leather-headrest.jpg" alt="A Barbearia Ã‰ Nossa" loading="lazy" class="w-full h-full object-cover" />
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(13,18,25,0.2) 0%, rgba(13,18,25,0.15) 60%, #0D1219 100%);"></div>
+        </div>
+
+        <div class="px-6 -mt-4 relative z-10">
+          <p class="text-[11px] uppercase tracking-[0.26em] text-[#C81E24] font-semibold mb-2">
+            VAMOS MARCAR?
+          </p>
+          <h2 class="font-barber-serif text-[36px] leading-[1.08] text-white font-normal mb-3">
+            Seu prÃ³ximo corte<br />estÃ¡ aqui.
+          </h2>
+          <p class="text-[14px] leading-[1.55] text-white/80 mb-6">
+            Agende seu horÃ¡rio pelo WhatsApp<br />e garanta seu atendimento.
+          </p>
+
+          <a
+            href="https://wa.me/5521999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20na%20A%20Barbearia%20%C3%89%20Nossa."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-3 bg-[#B81D22] hover:bg-[#CC2026] text-white font-semibold text-[15px] py-4 px-6 rounded-xl shadow-[0_8px_25px_rgba(184,29,34,0.4)] transition-all mb-7"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+            <span>Agendar agora</span>
+            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+
+          <div class="flex justify-center">
+            <a href="https://instagram.com/abarbeariaenossa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+              <svg class="w-7 h-7 text-white/85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <div class="text-[12.5px] leading-[1.35] text-left">
+                <p class="text-white/70">Nos siga no Instagram</p>
+                <p class="font-semibold text-white">@abarbeariaenossa</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
+</body>
+</html>
+
+
