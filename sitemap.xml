@@ -8,15 +8,71 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://a-nossa-barbearia.vercel.app/assets/hero-desktop.jpg</image:loc>
-      <image:title>A Barbearia É Nossa - Penha, Brás de Pina e Olaria</image:title>
+      <image:title>A Barbearia É Nossa - Barbearia na Penha, Brás de Pina e Olaria RJ</image:title>
     </image:image>
     <image:image>
       <image:loc>https://a-nossa-barbearia.vercel.app/assets/interior-chair.jpg</image:loc>
-      <image:title>Interior da barbearia na Penha RJ</image:title>
+      <image:title>Interior da barbearia tradicional na Penha RJ</image:title>
     </image:image>
     <image:image>
       <image:loc>https://a-nossa-barbearia.vercel.app/assets/resultados-main.jpg</image:loc>
-      <image:title>Corte de cabelo e barba na Penha</image:title>
+      <image:title>Corte de cabelo masculino e barba na Penha RJ</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/melhores-cortes-masculinos-calor-rio-de-janeiro.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/service-corte.jpg</image:loc>
+      <image:title>Melhores Cortes Masculinos para o Calor do Rio de Janeiro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/degrade-navalhado-vs-fade-tradicional-penha-rj.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/resultados-main.jpg</image:loc>
+      <image:title>Degradê Navalhado vs. Fade Tradicional: Qual Escolher?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/corte-infantil-penha-olaria-bras-de-pina.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/service-infantil.jpg</image:loc>
+      <image:title>Barbearia Infantil na Penha e Olaria: Corte Sem Estresse</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/como-manter-barba-alinhada-barboterapia-penha-rj.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/service-barba.jpg</image:loc>
+      <image:title>Como Manter a Barba Alinhada e Hidratada (Guia de Barbeiro)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/blog/barbearia-tradicional-penha-zona-da-leopoldina-rj.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/interior-chair.jpg</image:loc>
+      <image:title>Mais de 30 Anos na Penha: AForça da Barbearia Tradicional</image:title>
     </image:image>
   </url>
 </urlset>
