@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a-nossa-barbearia.vercel.app/sitemap.xml

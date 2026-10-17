@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://a-nossa-barbearia.vercel.app/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/hero-desktop.jpg</image:loc>
+      <image:title>A Barbearia É Nossa - Penha, Brás de Pina e Olaria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/interior-chair.jpg</image:loc>
+      <image:title>Interior da barbearia na Penha RJ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://a-nossa-barbearia.vercel.app/assets/resultados-main.jpg</image:loc>
+      <image:title>Corte de cabelo e barba na Penha</image:title>
+    </image:image>
+  </url>
+</urlset>
